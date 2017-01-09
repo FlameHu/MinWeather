@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/city/changeCity"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle":"black"
+  }
+}

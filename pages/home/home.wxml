@@ -1,0 +1,28 @@
+<!-- home.wxml -->
+<scroll-view class="homeContainer">
+    <view class="homeHeader" >
+        <text class="homeDate">{{date}}</text>
+        <text class="homeCity" bindtap="changeCity">{{currCity}}</text>
+    </view>
+    <view class="homeTemperature">
+        <text>{{currTemperature}}</text>
+    </view>
+    <view class="homeCurrWeatherDescContainer">
+        <view class="homeCurrWeatherDescV">
+            <image class="homeCurrWeatherIcon" src="{{currWeatherIconUrl}}" />
+            <text class="homeCurrWeatherStatus">{{currWeatherStatus}}</text>
+            <text class="currTempRange">{{currTempRange}}</text>
+        </view>
+    </view>
+
+    <scroll-view class="hourWeather" scroll-x="true">
+        <view class="lll"  wx:for="{{list}}" wx:for-item="item" bindtap="bindViewTap" 
+         data-title="{{item.title}}" >
+            <image style=" width: 50px;height: 50px;margin: 20rpx;" src="{{item.firstImg}}"   ></image>
+            <view  class="eee" > 
+                <view style="margin:5px;font-size:8px"> 标题:{{item.title}}</view>
+                <view style="margin:5px;color:red;font-size:6px"> 来源:{{item.source}}</view>
+            </view>
+        </view>
+    </scroll-view>
+</scroll-view>
